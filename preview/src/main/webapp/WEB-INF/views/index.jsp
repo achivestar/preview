@@ -31,6 +31,16 @@
 	  }
 
     </style>
+    <script>
+	function removeEmojis (e) {
+		    const regex = /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g;
+	    if(regex.test($(e).val())) {
+	        alert("이모지는 사용할 수 없습니다.");
+	        let strVal = $(e).val().replace(regex,'');
+	        $(e).val(strVal);
+	    }
+	}
+	</script>
 </head>
   <body class="bg-light py-3 py-lg-5">
     <div class="container">
@@ -103,7 +113,7 @@
            </div> 
           <div class="form-row">
             <div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="member" name="member" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="member" name="member" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 			 </div>
           </div>
 	    <!-- #3 end-->
@@ -118,7 +128,7 @@
            </div> 
           <div class="form-row">
             <div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="memberAge" name="memberAge" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="memberAge" name="memberAge" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 			 </div>
           </div>
 	    <!-- #4 end-->
@@ -133,7 +143,7 @@
            </div> 
           <div class="form-row">
            <div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="period" name="period" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="period" name="period" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 			 </div>
           </div>
 	    <!-- #5 end-->
@@ -148,7 +158,7 @@
            </div> 
           <div class="form-row">
             <div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="goal" name="goal" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="goal" name="goal" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 			 </div>
           </div>
 	    <!-- #6 end-->
@@ -162,7 +172,7 @@
           		<h2 class="h5">Question #7: 제주 여행경험은 얼마나 있으신가요?</h2>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans1" name="ans1" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans1" name="ans1" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -174,7 +184,7 @@
           		<h2 class="h5">Question #8: 제주 또는 국내,외 여행 경험 중 좋았던 기억은 어떤 것이 있으신가요?</h2>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans2" name="ans2" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans2" name="ans2" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -186,7 +196,7 @@
           		<h2 class="h5">Question #9: 제주 또는 국내,외 여행 경험 중 싫었던 기억은 어떤 것이 있으신가요?</h2>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans3" name="ans3" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans3" name="ans3" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -198,7 +208,7 @@
           		<h2 class="h5">Question #10: 제주에서 꼭 가보고 싶은 곳 또는 선호하시는 장소가 있으신가요?</h2>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans4" name="ans4" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans4" name="ans4" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -211,7 +221,7 @@
           		<h2 class="h5">Question #11: 제주에서 꼭 해보고 싶으신 경험, 체험이 있으신가요?</h2>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans5" name="ans5" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans5" name="ans5" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -222,7 +232,7 @@
           		<p class="small">(가족 모두 간단히 적어주셔도 됩니다)</p>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans6" name="ans6" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans6" name="ans6" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -233,7 +243,7 @@
           		<p class="small">(가족 모두 간단히 적어주셔도 됩니다)</p>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans7" name="ans7" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans7" name="ans7" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -244,7 +254,7 @@
           		<p class="small">(예:oo생일, 결혼기념일 등)</p>
               <br>
           		<div class="icheck-primary form-check form-check-inline">
-				  	<textarea class="form-control" id="ans8" name="ans8" cols="130" rows="5"></textarea>
+				  	<textarea class="form-control" id="ans8" name="ans8" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 				  </div>
           	</div>
           </div>
@@ -258,7 +268,7 @@
 	          	<h2 class="h5">Question #15: 가족 구성원분의 취미가 무엇인가요?</h2>
 	              <br>
 	          		<div class="icheck-primary form-check form-check-inline">
-					  	<textarea class="form-control" id="ans9" name="ans9" cols="130" rows="5"></textarea>
+					  	<textarea class="form-control" id="ans9" name="ans9" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 					  </div>
 	          	</div>
       	    </div>
@@ -268,7 +278,7 @@
 	          	<h2 class="h5">Question #16: 가족 구성원분이 좋아하시는 것이 무엇인가요?</h2>
 	              <br>
 	          		<div class="icheck-primary form-check form-check-inline">
-					  	<textarea class="form-control" id="ans10" name="ans10" cols="130" rows="5"></textarea>
+					  	<textarea class="form-control" id="ans10" name="ans10" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 					  </div>
 	          	</div>
       	    </div>
@@ -278,7 +288,7 @@
 	          	<h2 class="h5">Question #17: 숙박 기간 중 제주 또는 로컬지역의 특정 정보나 안내를 받고 싶으신 것이 있으신가요?</h2>
 	              <br>
 	          		<div class="icheck-primary form-check form-check-inline">
-					  	<textarea class="form-control" id="ans11" name="ans11" cols="130" rows="5"></textarea>
+					  	<textarea class="form-control" id="ans11" name="ans11" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 					  </div>
 	          	</div>
       	    </div>
@@ -288,7 +298,7 @@
 	          	<h2 class="h5">Question #18: 가족 구성원 중 SNS 활동을 하시는 분이 있으시다면 오픈이 가능 하시다면 주소 부탁 드립니다.</h2>
 	              <br>
 	          		<div class="icheck-primary form-check form-check-inline">
-					  	<textarea class="form-control" id="ans12" name="ans12" cols="130" rows="5"></textarea>
+					  	<textarea class="form-control" id="ans12" name="ans12" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 					  </div>
 	          	</div>
       	    </div>
@@ -298,7 +308,7 @@
 	          	<h2 class="h5">Question #19: 실례가 되지 않으신다면 직업을 여쭈어 보아도 될까요?</h2>
 	              <br>
 	          		<div class="icheck-primary form-check form-check-inline">
-					  	<textarea class="form-control" id="ans13" name="ans13" cols="130" rows="5"></textarea>
+					  	<textarea class="form-control" id="ans13" name="ans13" cols="130" rows="5" onkeyup="removeEmojis(this)"></textarea>
 					  </div>
 	          	</div>
       	    </div>
